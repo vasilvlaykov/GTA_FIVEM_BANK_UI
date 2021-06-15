@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500&display=swap");
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-card {
+  width: 80vw;
+  height: 80vh;
+  background-color: #222832;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  background-color: #222832;
+  color: white;
+  display: flex;
+  width: 80vw;
+  height: 70vh;
+}
+
+.wrapper-left {
+  min-width: 35%;
+  height: 100%;
+}
+
+.wrapper-right {
+  min-width: 65%;
+  height: 100%;
+}
+
+.account-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e3954;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(201, 211, 255);
+  border-radius: 3px;
+}
+
+.wrapper-left-header {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.account-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-card-footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-amount {
+  font-size: 24px;
+}
+
+.account-card p {
+  margin: 0;
+  font-weight: bold;
+}
+
+button {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.depositBtn, .modalDepositBtn, .modalTransferBtn, .modalWithdrawBtn {
+  border: 2px solid #80ff00;
+  background-color: #80ff00;
+}
+
+.depositBtn:hover,
+.transferBtn:hover,
+.withdrawBtn:hover,
+.exitBtn:hover,
+.modalCancelBtn:hover,
+.modalDepositBtn:hover,
+.modalWithdrawBtn:hover,
+.modalTransferBtn:hover {
+  background-color: white;
+  transition: 300ms;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.withdrawBtn, .modalCancelBtn {
+  border: 2px solid #fd8900;
+  background-color: #fd8900;
+  margin: 0 1rem;
+}
+
+.transferBtn,
+.exitBtn {
+  border: 2px solid rgb(201, 211, 255);
+  background-color: rgb(201, 211, 255);
+}
+
+.wrapper-right-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wrapper-left-footer {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.transaction-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #30475c;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(201, 211, 255);
+  border-radius: 3px;
+}
+
+.transaction-card p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.transaction-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(201, 211, 255);
+}
+
+.transaction-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.transaction-card-body-left {
+  display: flex;
+  align-items: center;
+}
+
+.transaction-amount {
+  font-size: 26px !important;
+  color: #80ff00;
+  padding-right: 2rem;
+}
+
+.transaction-amountRed {
+  font-size: 26px !important;
+  color: rgb(255, 0, 0);
+  padding-right: 2rem;
+}
+
+.transaction-card-body p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.transaction-card-body-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.transaction-card-footer p {
+  font-weight: normal;
+}
+
+.transaction-date-time {
+  font-weight: normal !important;
+}
+
+.wrapper-right-body,
+.wrapper-left-body {
+  height: 90%;
+  overflow: auto;
+}
+
+.wrapper-right-body::-webkit-scrollbar,
+.wrapper-left-body::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper-left-footer p {
+  margin: 0;
+  align-self: center;
+}
+
+.bg-modal {
+	background-color: rgba(252, 252, 252, 0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.bg-modal-main {
+  background-color: rgba(255, 255, 255, 0.3);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  z-index: -1;
+}
+
+.modal-contents {
+	width: 30vw;
+  min-height: 20vh;
+	background-color: #1e3954;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  max-width: 70%;
+}
+
+input {
+	margin: 15px 0;
+	width: 100%;
+	padding: 0.5rem 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+input::placeholder { 
+  color: white;
+  opacity: 0.8;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #fff;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.modal-buttons button {
+  margin: 0;
+}
+
+.bankAccountName {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 1rem;
+}
+
+
+label{
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  display: inline-block;
+  border: 5px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  border-left-color: #80ff00;
+  animation: rotate 1.2s linear infinite;
+}
+@keyframes rotate {
+  50%{
+    border-left-color: #9b59b6;
+  }
+  75%{
+    border-left-color: #e67e22;
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+label .check-icon{
+  display: none;
+}
+label .check-icon:after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 28px;
+  transform: scaleX(-1) rotate(135deg);
+  height: 56px;
+  width: 28px;
+  border-top: 5px solid #80ff00;
+  border-right: 5px solid #80ff00;
+  transform-origin: left top;
+  animation: check-icon 0.8s ease;
+}
+@keyframes check-icon {
+  0%{
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20%{
+    height: 0;
+    width: 28px;
+    opacity: 1;
+  }
+  40%{
+    height: 56px;
+    width: 28px;
+    opacity: 1;
+  }
+  100%{
+    height: 56px;
+    width: 28px;
+    opacity: 1;
+  }
+}
+
+label .check-icon{
+  display: block;
+}
+
+label{
+  animation: none;
+  border-color: #80ff00;
+  transition: border 0.5s ease-out;
+}
+
+.errorMsg {
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  /* color: white; */
+  background-color: rgb(255, 67, 67);
+  border-radius: 4px;
+  display: none;
+}
